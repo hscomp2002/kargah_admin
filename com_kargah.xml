@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" version="1.6">
+	<name>Kargah</name>
+	<creationDate>2014-11-28</creationDate>
+	<author>gcom</author>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Copyright (C) 2014  Open Source Matters. All rights reserved.</copyright>	
+	<license></license>
+	<version>1.0.0</version>
+	<description>این کامپونتت توسط گروه gcom ساخته شده است</description>
+	<installfile></installfile>
+	<uninstallfile></uninstallfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="site">
+			<filename>kargah.php</filename>
+			<filename>index.html</filename>			
+			<folder>class</folder>
+			<folder>css</folder>
+			<folder>images</folder>
+			<folder>img</folder>
+			<folder>js</folder>			
+	</files>	
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_kargah.ini</language>
+	</languages>
+	<administration>
+		<menu link="index.php?option=com_kargah">Aren-Kargah</menu>
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>kargah.php</filename>
+			<filename>index.html</filename>
+			<filename>access.xml</filename>			
+			<folder>sql</folder>			
+			<folder>tables</folder>
+			<folder>class</folder>
+			<folder>css</folder>
+			<folder>images</folder>
+			<folder>img</folder>
+			<folder>js</folder>	
+		</files>	
+        <languages folder="admin">
+        	<language tag="en-GB">language/en-GB.com_kargah.ini</language>
+        	<language tag="en-GB">language/en-GB.com_kargah.sys.ini</language>
+		</languages>		
+	</administration>
+</extension>
