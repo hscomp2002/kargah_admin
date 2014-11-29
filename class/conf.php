@@ -6,7 +6,7 @@
 		public $db = "";
 		public $user = "";
 		public $pass = "";
-       	public $date_off = "0:00";
+       		public $date_off = "0:00";
 		public $access_deny = "error";
 		public $enableSms = FALSE;
 		public $company_id=1;
