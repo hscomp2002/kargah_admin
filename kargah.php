@@ -68,6 +68,8 @@ if($command == 'list')
 	function loadToz($inp)
 	{
 		$k = new kargah_class($inp);
+                if(trim($k->toz)==='')
+                    $k->toz='جهت ویراش کلیک کنید';
 		$out = '<a href="index.php?option=com_kargah&comman=edi&id='.$inp.'&" >'.substrH(strip_tags($k->toz),50).'</a>';
 		return($out);
 	}

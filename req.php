@@ -69,17 +69,22 @@
     }
 </script>
 <div id="menu_div" dir="ltr">
-	<a class="btn btn-inverse" href="index.php?option=com_kargah&comman=req&">درخواست ها<a/>
-	<a class="btn btn-inverse" href="index.php?option=com_kargah&">صفحه اصلی<a/>
+	<button class="btn btn-inverse" onclick="window.location='index.php?option=com_kargah&comman=req&';">درخواست ها</button>
+	<button class="btn btn-inverse" onclick="window.location='index.php?option=com_kargah&';">صفحه اصلی</button>
 </div>
 <br/>
-<div id="sdiv">
-	تاریخ : <input class="dateValue" id="aztarikh" /><input class="dateValue" id="tatarikh" />
+<div id="sdiv" style="margin-bottom: 10px;" >
+    <div>
+        از تاریخ : <input class="dateValue" id="aztarikh" />
+        تا تاریخ: <input class="dateValue" id="tatarikh" />
 	نام : <input id="sfname" />
 	نام خانوادگی: <input id="slname" />
-	تلفن همراه : <input id="smob" />
+    </div>  
+    <div>
+	موبایل : <input id="smob" />
 	تلفن ثابت : <input id="stell" />
 	پست الکترونیک : <input id="saddress" />
-	<button onclick="searchGrid();">جستجو</button>
+	<button class="btn btn-info" onclick="searchGrid();">جستجو</button>
+    </div>
 </div>
 <div id="main_div_khadamat" ></div>
