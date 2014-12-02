@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS `#__kargah_data` (
   `toz` mediumtext COLLATE utf8_persian_ci NOT NULL COMMENT 'توضیحات',
   `pic` varchar(100) COLLATE utf8_persian_ci NOT NULL COMMENT 'تصویر',
   `tarikh` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'تاریخ برگزاری',
-  `en` int(1) NOT NULL COMMENT 'یک یعنی قابل رزرو و صفر یعنی غیر فعال و منفی یک یعنی پیشنهادی'
+  `en` int(1) NOT NULL COMMENT 'یک یعنی قابل رزرو و صفر یعنی غیر فعال و منفی یک یعنی پیشنهادی',
+  `ghimat` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 CREATE TABLE IF NOT EXISTS `#__kargah_reserve` (

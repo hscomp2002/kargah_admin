@@ -17,6 +17,7 @@
 					$this->pic = $r['pic'];
 					$this->tarikh = $r['tarikh'];
 					$this->en = $r['en'];
+                                        $this->ghimat =(int) $r['ghimat'];
 				}
 			}
 		}
