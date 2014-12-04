@@ -5,8 +5,13 @@ CREATE TABLE IF NOT EXISTS `#__kargah_data` (
   `pic` varchar(100) COLLATE utf8_persian_ci NOT NULL COMMENT 'تصویر',
   `tarikh` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'تاریخ برگزاری',
   `en` int(1) NOT NULL COMMENT 'یک یعنی قابل رزرو و صفر یعنی غیر فعال و منفی یک یعنی پیشنهادی',
-  `ghimat` int(11) NOT NULL DEFAULT '0'
+  `ghimat` int(11) NOT NULL DEFAULT '0',
+  `pishnehad` varchar(200) COLLATE utf8_persian_ci NOT NULL COMMENT 'پیشنهاد دهنده'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+ALTER TABLE `#__kargah_data`
+ ADD PRIMARY KEY (`id`);
+ALTER TABLE `#__kargah_data`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'hidden',AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `#__kargah_reserve` (
 `id` int(11) NOT NULL COMMENT 'hidden',

@@ -4,15 +4,26 @@
 		$k = new kargah_class($id);
 		return(isset($k->name)?$k->name:'----');
 	}
+        function loadStat($inp)
+        {
+            $out=$inp;
+            if((int)$inp==-1)
+                $out = 'پیش ثبت نام';
+            return($out);
+        }
         $gname = "gname_reserve";
 	$input =array($gname=>array('table'=>'#__kargah_reserve','div'=>'main_div_khadamat'));
         $xgrid = new xgrid($input,"index.php?option=com_kargah&comman=req&");
 	$xgrid->column[$gname][1]['access'] = 'a';
-	$xgrid->column[$gname][7]['name'] = 'وضعیت(منفی یک یعنی پیش ثبت نام)';
+	$xgrid->column[$gname][7]['name'] = 'وضعیت';
+        $xgrid->column[$gname][7]['cfunction'] = array('loadStat');
 	$xgrid->column[$gname][1]['cfunction'] = array('loadDate');
 	$xgrid->column[$gname][8]['name'] = 'کارگاه';
 	$xgrid->column[$gname][8]['cfunction'] = array('loadKargah');
 	$xgrid->column[$gname][8]['access'] = 'a';
+        $xgrid->column[$gname][9] = $xgrid->column[$gname][0];
+        $xgrid->column[$gname][9]['name'] = 'ره‌گیری';
+        
         $xgrid->canEdit[$gname]=TRUE;
         $xgrid->canDelete[$gname]=TRUE;
 	//$xgrid->echoQuery = TRUE;
