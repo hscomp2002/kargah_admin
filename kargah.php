@@ -87,10 +87,10 @@ if($command == 'list')
         $xgrid->column[$gname][5]['search']='list';
         $xgrid->column[$gname][5]['searchDetails'] = array(-2=>'پیشنهادی',0=>'غیر فعال',1=>'فعال');
         $xgrid->column[$gname][6]['name'] = 'قیمت';
-	$xgrid->column[$gname][7] = $xgrid->column[$gname][0];
-	$xgrid->column[$gname][7]['name'] = 'تصویر';
-	$xgrid->column[$gname][7]['cfunction'] = array('loadPic');
-	$xgrid->column[$gname][7]['access'] = 'a';
+	$xgrid->column[$gname][8] = $xgrid->column[$gname][0];
+	$xgrid->column[$gname][8]['name'] = 'تصویر';
+	$xgrid->column[$gname][8]['cfunction'] = array('loadPic');
+	$xgrid->column[$gname][8]['access'] = 'a';
         $xgrid->canEdit[$gname]=TRUE;
         $xgrid->canAdd[$gname]=TRUE;
         $xgrid->canDelete[$gname]=TRUE;
