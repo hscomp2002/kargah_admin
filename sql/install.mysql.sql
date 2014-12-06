@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `#__kargah_reserve` (
   `mob` varchar(20) COLLATE utf8_persian_ci NOT NULL COMMENT 'موبایل',
   `tell` varchar(20) COLLATE utf8_persian_ci NOT NULL COMMENT 'تلفن ثابت',
   `address` mediumtext COLLATE utf8_persian_ci NOT NULL COMMENT 'پست الکترونیک',
-  `pardakht` varchar(100) COLLATE utf8_persian_ci NOT NULL DEFAULT '-1' COMMENT 'منفی یک یعنی رزرو موقت ، صفر یعنی رزرو قطعی ناموفق و ی هر عددی بزرگتر از صفر یعنی رزرو قطعی موفق',
+  `pardakht` varchar(2000) COLLATE utf8_persian_ci NOT NULL DEFAULT '-1' COMMENT 'منفی یک یعنی رزرو موقت ، صفر یعنی رزرو قطعی ناموفق و ی هر عددی بزرگتر از صفر یعنی رزرو قطعی موفق',
   `kargah_id` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
